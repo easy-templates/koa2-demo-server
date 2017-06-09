@@ -9,7 +9,7 @@
 - koa2
 - mysql
 - co-mysql
-- koa-views
+- koa-cors
 - ejs
 - koa-router
 - koa-static
@@ -19,7 +19,7 @@
 
 ## Features
 
-Currently contains user and user pages, page shows the database query to the user information。
+This project is a pure back-end project, used for front-end separation of the back-end simulation。
 
 ## Quickstart
 

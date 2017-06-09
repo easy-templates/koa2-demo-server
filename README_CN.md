@@ -6,7 +6,7 @@
 
 数据库使用mysql，通过[mysql](https://github.com/mysqljs/mysql)以及[co-mysql](https://github.com/coderhaoxin/co-mysql)实现数据库连接。
 
-视图使用[koa-views](https://github.com/queckezz/koa-views)以及[ejs](https://github.com/mde/ejs)进行渲染。
+通过[koa-cors](https://github.com/evert0n/koa-cors)支持跨域。
 
 通过[koa-static](https://github.com/koajs/static)来引入静态资源，指定静态资源路径。
 
@@ -19,7 +19,7 @@
 - koa2
 - mysql
 - co-mysql
-- koa-views
+- koa-cors
 - koa-static
 - ejs
 - koa-router
@@ -29,7 +29,7 @@
 
 ## 功能
 
-目前包含欢迎页以及用户页，用户页显示数据库中查询到的用户信息。
+本工程为纯后端工程，用于前后端分离的后端模拟。
 
 ## 快速上手
 
@@ -47,9 +47,7 @@ $ npm i
 $ npm run start
 ```
 
-此时浏览器会自动打开，弹出首页。
-
-修改url为：<http://localhost:3201/user>,查询所有用户信息。更多参数请查看具体代码。
+此时浏览器会自动打开，弹出<http://localhost:3201/test.html>查询所有用户信息。
 
 ## 如何参与贡献
 

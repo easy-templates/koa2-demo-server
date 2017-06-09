@@ -28,7 +28,7 @@ gulp.task('server', ["node"], function() {
     ];
 
     browserSync.init(files, {
-        proxy: 'http://localhost:3200',
+        proxy: 'http://localhost:3200/test.html',
         // browser: 'chrome',
         notify: false,
         port: 3201

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>koa2-demo-server test</title>
+</head>
+
+<body>
+    <div class="">
+        <span>请求用户(get):</span>
+    </div>
+    <div id="user-get">
+        <span></span>
+    </div>
+    <div class="">
+        <span>请求用户(post):</span>
+    </div>
+    <div id="user-post">
+        <span></span>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $.ajax({
+            type: "get",
+            url: "http://localhost:3201/user",
+            dataType: "json",
+            async: true,
+            success: function(data) {
+                var dataStr = JSON.stringify(data);
+                $('#user-get span').html(dataStr);
+            },
+            error: function(e) {
+            }
+        });
+
+        $.ajax({
+            type: "post",
+            url: "http://localhost:3201/user",
+            dataType: "json",
+            async: true,
+            success: function(data) {
+                var dataStr = JSON.stringify(data);
+                $('#user-post span').html(dataStr);
+            },
+            error: function(e) {
+            }
+        });
+    </script>
+</body>
+
+</html>
