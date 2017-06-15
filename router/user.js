@@ -21,8 +21,9 @@ router.all('/', async function(ctx, next) {
     // http://localhost:3200/user?id=1
     // http://localhost:3200/user?code=liuyk
     // 根据id或者code进行查询,否则查询所有
-    var code = ctx.request.query.code;
-    var id = ctx.request.query.id;
+    // POST请求会通过bodyParser来将参数处理为ctx.request.body
+    var code = ctx.request.query.code || ctx.request.body.code;
+    var id = ctx.request.query.id || ctx.request.body.code;
     var rows = []
     if (id) {
         var rows = await server.query('user', '*', 'id = ' + id);

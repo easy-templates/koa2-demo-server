@@ -4,8 +4,12 @@ const router = require('koa-router')();
 const index = require('./router/index');
 const user = require('./router/user');
 const cors = require('koa-cors');
+const bodyParser = require('koa-bodyparser')
 
 const app = new koa();
+
+// 使用ctx.body解析中间件
+app.use(bodyParser())
 // 支持跨域
 app.use(cors());
 // 指定静态资源路径

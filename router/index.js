@@ -7,4 +7,5 @@ router.get('/', async function(ctx, next) {
     }
     ctx.body = data
 });
+
 module.exports = router;
